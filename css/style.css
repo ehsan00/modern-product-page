@@ -1,0 +1,192 @@
+/* Header کلی */
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/KalamehWeb-Regular.woff2') format('woff2'),
+       url('../fonts/KalamehWeb-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'MyFont', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+header, h1, p, div {
+  font-family: 'MyFont', sans-serif;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* وسط چین کردن هدر کل */
+  font-family: Arial, sans-serif;
+}
+
+/* بخش اول هدر */
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  background: #ffffff;
+  width: 1280px;       /* پهنای ثابت */
+  height: 60px;
+  justify-content: space-between;
+  direction: rtl;      /* راست به چپ */
+}
+
+.header-top > div {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  position: relative;
+}
+
+.line-vertical {
+  width: 0.5px;        /* پهنای خط */
+  height: 30%;       /* ارتفاع نسبت به والد */
+  background-color: #d5d5d5;  /* رنگ خط */
+}
+/*لوگو*/
+
+.logo-pic {
+  height: 60px;           /* ارتفاع والد مشخص */
+  display: flex;
+  align-items: center;    /* وسط چین عمودی */
+}
+
+.logo-pic img{
+  height: 95%;            /* 90% ارتفاع والد */
+  width: auto;            /* نسبت تصویر حفظ بشه */
+  display: block;         /* برای حذف فاصله پایین تصویر */
+}
+/*عنوان و توضیحات لوگو*/
+.logo-name {
+  display: flex;
+  flex-direction: column;   /* آیتم‌ها را روی هم قرار بده */
+  justify-content: center;  /* وسط چین عمودی */  
+}
+.header-title {
+    font-size: 25px;
+    line-height: 5px;
+    margin: 10px;
+    color: #6968af;
+}
+.header-description {
+    font-size: 16px;
+    line-height: 5px;
+    margin: 10px;
+    color: #7cd1e5;
+}
+
+/* لوگو، حساب کاربری و سبد خرید - اندازه ثابت */
+.logo, .account, .cart {
+  flex: 0 0 auto;   /* اندازه ثابت، کشیده نمیشن */
+}
+
+/* بخش جستجو */
+.search {
+  flex: 1 1 auto;     /* اجازه میده که این بخش بیشترین پهنا را بگیره */
+  display: flex;
+}
+
+.search input {
+  flex: 1 1 auto;     /* کشیده شدن input داخل search */
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  background: #eee;
+}
+
+/* بخش دوم هدر */
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e0e0e0;
+  padding: 10px 0;
+  width: 1280px;       /* پهنای ثابت */
+  direction: rtl;      /* راست به چپ */
+}
+
+/* منوی دراپ‌داون */
+.menu-dropdown {
+  position: relative;
+}
+
+.menu-title {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: #d4d4d4;
+  border-radius: 5px;
+}
+
+.menu-list {
+  position: absolute;
+  top: 100%;
+  right: 0; /* راست به چپ */
+  background: #fff;
+  border: 1px solid #ccc;
+  display: none;
+  flex-direction: column;
+  width: 150px;
+}
+
+.menu-dropdown:hover .menu-list {
+  display: flex;
+}
+
+.menu-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-list li:hover {
+  background: #f0f0f0;
+}
+/* منوی ۴ موردی */
+.menu-4-items ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.menu-4-items ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border-radius: 5px;
+}
+
+.menu-4-items ul li:hover {
+  background: #c0c0c0;
+}
+/* بخش پشتیبانی */
+.support {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.support-text span:first-child {
+  display: block;
+  font-weight: bold;
+}
+
+.support-text span:last-child {
+  display: block;
+  font-size: 0.9em;
+  color: #333;
+}
