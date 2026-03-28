@@ -22,6 +22,11 @@ header {
   align-items: center; /* وسط چین کردن هدر کل */
   font-family: Arial, sans-serif;
 }
+button {
+  all: unset;          /* همه استایل‌های پیشفرض مرورگر پاک می‌شود */
+  display: inline-block; /* یا flex/block برای کنترل سایز */
+  cursor: pointer;     /* نشانگر موس */
+}
 
 /* بخش اول هدر */
 .header-top {
@@ -87,24 +92,67 @@ header {
 
 /* بخش جستجو */
 .search {
-  flex: 1 1 auto;     /* اجازه میده که این بخش بیشترین پهنا را بگیره */
   display: flex;
+  flex: 1;               /* کشیده شدن حداکثر */
+  height: 55px;           /* 55px ارتفاع والد */
+  background-color: #eee; /* پس زمینه ملایم خاکستری */
+  border-radius: 15px;
+  overflow: hidden;
 }
 
+/* input جستجو */
 .search input {
-  flex: 1 1 auto;     /* کشیده شدن input داخل search */
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
+  font-family: 'MyFont', sans-serif;
+  flex: 1;
+  border: none;
+  padding: 0 10px;
+  font-size: 1em;
+  line-height: 0;
+  outline: none;
+  background: transparent; /* تا پس‌زمینه والد دیده بشه */
 }
 
-.search button {
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-right: none;
-  border-radius: 0 5px 5px 0;
+/* دکمه آیکن */
+.search-btn {
+  height: 55px;           /* 55px ارتفاع والد */
+  width: 40px;
+  background-image: url('../pic/search.svg'); /* مسیر SVG خودت */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%; /* سایز SVG داخل دکمه */
+  border: none;
   cursor: pointer;
-  background: #eee;
+  transition: background 0.3s;
+  border-width: 0;
+}
+.search-btn:hover {
+  background-color: #6968af;
+  background-image: url('../pic/search-hover.svg'); /* مسیر SVG خودت */
+}
+
+/*account icon */
+.account-icon {
+  height: 55px;           /* ارتفاع والد مشخص */
+  display: flex;
+  align-items: center;    /* وسط چین عمودی */
+}
+
+.account-icon img{
+  height: 50%;            /* 90% ارتفاع والد */
+  width: auto;            /* نسبت تصویر حفظ بشه */
+  display: block;         /* برای حذف فاصله پایین تصویر */
+}
+/*cart icon */
+.cart-icon {
+  height: 55px;           /* ارتفاع والد مشخص */
+  display: flex;
+  align-items: center;    /* وسط چین عمودی */
+}
+
+.cart-icon img{
+  height: 50%;            /* 90% ارتفاع والد */
+  width: auto;            /* نسبت تصویر حفظ بشه */
+  display: block;         /* برای حذف فاصله پایین تصویر */
 }
 
 /* بخش دوم هدر */
