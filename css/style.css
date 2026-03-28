@@ -142,6 +142,7 @@ button {
   width: auto;            /* نسبت تصویر حفظ بشه */
   display: block;         /* برای حذف فاصله پایین تصویر */
 }
+
 /*cart icon */
 .cart-icon {
   height: 55px;           /* ارتفاع والد مشخص */
@@ -155,12 +156,19 @@ button {
   display: block;         /* برای حذف فاصله پایین تصویر */
 }
 
+.header-divider {
+  width: 100%;          /* کل عرض صفحه */
+  height: 1px;          /* ضخامت خط */
+  background-color: #ddd; /* رنگ خط */
+}
+
 /* بخش دوم هدر */
 .header-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #e0e0e0;
+  background: #fff;
+  height: 60px;
   padding: 10px 0;
   width: 1280px;       /* پهنای ثابت */
   direction: rtl;      /* راست به چپ */
@@ -169,6 +177,11 @@ button {
 /* منوی دراپ‌داون */
 .menu-dropdown {
   position: relative;
+  
+  display: flex;
+  height: 55px;           /* 55px ارتفاع والد */
+  background-color: #eee; /* پس زمینه ملایم خاکستری */
+  border-radius: 15px;
 }
 
 .menu-title {
@@ -177,32 +190,53 @@ button {
   align-items: center;
   gap: 5px;
   padding: 5px 10px;
-  background: #d4d4d4;
-  border-radius: 5px;
+  border-radius: 15px;
 }
-
+.dropdown-icon {
+  font-size: 10px;
+  margin-right: 100px;
+}
+.menu-title img {
+  height: 50%;            /* 90% ارتفاع والد */
+  width: auto;            /* نسبت تصویر حفظ بشه */
+  display: block;         /* برای حذف فاصله پایین تصویر */
+  margin-left: 10px;
+}
 .menu-list {
   position: absolute;
   top: 100%;
   right: 0; /* راست به چپ */
-  background: #fff;
-  border: 1px solid #ccc;
-  display: none;
+  background: #f8f8f8;
+  opacity: 0;
+  visibility: hidden;
   flex-direction: column;
   width: 150px;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .menu-dropdown:hover .menu-list {
   display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
+
 
 .menu-list li {
   padding: 10px;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .menu-list li:hover {
-  background: #f0f0f0;
+  background: #eee;
 }
 /* منوی ۴ موردی */
 .menu-4-items ul {
