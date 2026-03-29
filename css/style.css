@@ -273,8 +273,15 @@ button {
   transform: translateX(0);
 }
 
+.menu-4-items {
+  display: flex;
+  flex: 1;               /* کشیده شدن حداکثر */
+  justify-content: flex-start; /* 👈 چسبیدن به ابتدا */
+}
+
 /* منوی ۴ موردی */
 .menu-4-items ul {
+  justify-content: first baseline;
   display: flex;
   gap: 15px;
   list-style: none;
@@ -283,12 +290,11 @@ button {
 .menu-4-items ul li {
   padding: 5px 10px;
   cursor: pointer;
-  background: #dcdcdc;
   border-radius: 5px;
 }
 
 .menu-4-items ul li:hover {
-  background: #c0c0c0;
+  color: #6968af;
 }
 /* بخش پشتیبانی */
 .support {
@@ -297,13 +303,30 @@ button {
   gap: 10px;
 }
 
+.support-pic {
+  height: 30px;           /* ارتفاع والد مشخص */
+  display: flex;
+  background-color: #eee;
+  border-radius: 15px;
+  padding: 10px;
+  align-items: center;    /* وسط چین عمودی */
+}
+
+.support-pic img{
+  height: 100%;            /* 90% ارتفاع والد */
+  width: auto;            /* نسبت تصویر حفظ بشه */
+  display: block;         /* برای حذف فاصله پایین تصویر */
+}
+
 .support-text span:first-child {
   display: block;
   font-weight: bold;
+  text-align: left;
 }
 
 .support-text span:last-child {
   display: block;
   font-size: 0.9em;
   color: #333;
+  text-align: left;
 }
