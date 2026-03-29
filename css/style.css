@@ -7,6 +7,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -41,6 +42,7 @@ button {
     cursor: pointer;
     /* نشانگر موس */
 }
+
 
 /* بخش اول هدر */
 .header-top {
@@ -464,7 +466,7 @@ button {
 }
 
 .product-features-title {
-    width: 35%;
+    width: 37%;
 }
 
 .product-price-buy {
@@ -476,7 +478,7 @@ button {
 .gallery {
     display: flex;
     gap: 10px;
-    width: 40%;
+    width: 38%;
     max-width: 1000px;
     align-items: stretch;
 }
@@ -524,7 +526,8 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    overflow: hidden; /* مهم */
+    overflow: hidden;
+    /* مهم */
     flex: 1;
     border-radius: 15px;
 }
@@ -541,7 +544,8 @@ button {
 }
 
 .thumb:hover {
-    opacity: 70%;;
+    opacity: 70%;
+    ;
     border-radius: 15px;
 }
 
@@ -621,26 +625,58 @@ button {
     font-size: 22px;
     font-weight: bolder;
     margin: 0;
+    margin-top: 15px;
 }
 
 .features-title {
     display: flex;
-    align-items: center; /* اگر نیاز به وسط چین باشه */
+    align-items: center;
+    direction: rtl; /* مهم */
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .line-ended-p {
-    margin: 0;
-    padding-right: 10px; /* فاصله بین متن و خط */
-    position: relative;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 17px;
+    color: #333;
 }
 
-.line-ended-p::after {
-    content: "";
-    flex: 1; /* باقیمانده فضا را می‌گیرد */
-    border-bottom: 1px solid #000; /* خط */
-    margin-left: 10px; /* فاصله از متن */
+.line {
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+    margin-top: 5px;
+    margin-right: 15px;
 }
 
 .features-list {
-    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative; /* 👈 ضروری */
+    line-height: 25px;
+    padding-right: 20px;
+
+}
+.features-list li::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: rgb(105, 104, 175);
+    border-radius: 50%;
 }
