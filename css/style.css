@@ -286,6 +286,7 @@ button {
     margin: 0;
     width: 100%;
     margin-top: 10px;
+    z-index: 1000;
 }
 
 .menu-dropdown:hover .menu-list {
@@ -471,6 +472,7 @@ button {
 
 .product-price-buy {
     width: 25%;
+    padding: 15px;
 }
 
 
@@ -631,9 +633,10 @@ button {
 .features-title {
     display: flex;
     align-items: center;
-    direction: rtl; /* مهم */
+    direction: rtl;
+    /* مهم */
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .line-ended-p {
@@ -660,15 +663,18 @@ button {
     margin-top: 15px;
     margin-right: 10px;
 }
+
 .features-list li {
     display: flex;
     align-items: center;
     gap: 20px;
-    position: relative; /* 👈 ضروری */
+    position: relative;
+    /* 👈 ضروری */
     line-height: 25px;
     padding-right: 20px;
 
 }
+
 .features-list li::before {
     content: '';
     position: absolute;
@@ -679,4 +685,141 @@ button {
     height: 12px;
     background-color: rgb(105, 104, 175);
     border-radius: 50%;
+}
+
+.brand {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-btn {
+    width: 100%;
+    background-color: #7cd1e5;
+    text-align: center;
+    color: #fff;
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.video-btn:hover {
+    transform: scale(1.05);
+    background-color: #6968af;
+}
+
+
+
+/* والد کارت */
+.price-card {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.price-card-2 {
+    display: block;
+}
+
+/* قیمت‌ها */
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 16px;
+}
+
+.discounted-price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #222;
+}
+
+/* والد */
+.add-to-cart-2 {
+    display: flex;
+    justify-content: center;
+    /* وسط چین افقی */
+    align-items: center;
+    /* وسط چین عمودی */
+    gap: 10px;
+    /* فاصله بین input و دکمه */
+    flex-wrap: wrap;
+    /* اگر فضای کم بود، میره خط بعد */
+}
+
+/* کانتینر دکمه‌های ± و input */
+.add-to-cart-container {
+    display: flex;
+    align-items: center;
+}
+
+/* دکمه‌های ± */
+.quantity-btn {
+    height: 40px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background-color: #ddd;
+}
+
+.quantity-btn-1 {
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 0 15px 15px 0;
+}
+
+.quantity-btn-2 {
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 15px 0 0 15px;
+}
+
+/* input تعداد */
+#quantity {
+    width: 30px;
+    text-align: center;
+    font-size: 14px;
+    border: 0;
+    height: 40px;
+    border-left: 1px solid #ddd;
+    /* فقط سمت چپ */
+    border-right: 1px solid #ddd;
+    /* فقط سمت راست */
+}
+
+#quantity::-webkit-outer-spin-button,
+#quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* برای Firefox */
+#quantity[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* دکمه افزودن به سبد خرید */
+.add-to-cart {
+    padding: 0 10px 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #7cd1e5;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px;
+}
+
+.add-to-cart:hover {
+    background-color: #5a57b0;
 }

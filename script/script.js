@@ -97,3 +97,16 @@ document.addEventListener("keydown", (e) => {
 /* اجرای اولیه */
 renderThumbs();
 setActive(currentIndex);
+
+// توابع افزایش/کاهش تعداد
+function increment() {
+  const input = document.getElementById('quantity');
+  input.value = parseInt(input.value) + 1;
+}
+
+function decrement() {
+  const input = document.getElementById('quantity');
+  if(parseInt(input.value) > 1) {
+    input.value = parseInt(input.value) - 1;
+  }
+}
