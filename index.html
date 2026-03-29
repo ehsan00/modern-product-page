@@ -1,87 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Product Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header>
-  <!-- بخش اول هدر -->
-  <div class="header-top">
-    <div class="logo">
-        <div class="logo-pic">
-            <img src="pic/logo.svg"><img>
+    <header>
+        <!-- بخش اول هدر -->
+        <div class="header-top">
+            <div class="logo">
+                <div class="logo-pic">
+                    <img src="pic/logo.svg"><img>
+                </div>
+                <div class="logo-name">
+                    <h1 class="header-title">بانه جانـــبی</h1>
+                    <p class="header-description">مرجع لوازم جانبی</p>
+                </div>
+            </div>
+            <div class="line-vertical"></div>
+            <div class="search">
+                <input type="text" placeholder="جستجو...">
+                <div class="search-btn">
+                    <button class="icon-btn"></button>
+                </div>
+            </div>
+            <div class="line-vertical"></div>
+            <div class="account">
+                <div class="account-icon">
+                    <img src="pic/user.svg"><img>
+                </div>
+            </div>
+            <div class="line-vertical"></div>
+            <div class="cart">
+                <div class="cart-icon">
+                    <img src="pic/cart.svg"><img>
+                </div>
+            </div>
         </div>
-        <div class="logo-name">
-            <h1 class="header-title">بانه جانـــبی</h1>
-            <p class="header-description">مرجع لوازم جانبی</p>
-        </div>
-    </div>
-    <div class="line-vertical"></div>
-    <div class="search">
-      <input type="text" placeholder="جستجو...">
-      <div class="search-btn">
-        <button class="icon-btn"></button>
-      </div>
-    </div>
-    <div class="line-vertical"></div>
-    <div class="account">
-      <div class="account-icon">
-        <img src="pic/user.svg"><img>
-      </div>
-    </div>
-    <div class="line-vertical"></div>
-    <div class="cart">
-      <div class="cart-icon">
-        <img src="pic/cart.svg"><img>
-      </div>
-    </div>
-  </div>
-  <div class="header-divider"></div>
+        <div class="header-divider"></div>
 
-  <!-- بخش دوم هدر -->
-  <div class="header-bottom">
-    <!-- منوی دراپ‌داون -->
-    <div class="menu-dropdown">
-      <div class="menu-title">
-        <img src="pic/shop.svg"></img>
-        دسته بندی ها <span class="dropdown-icon">▼</span>
-      </div>
-      <ul class="menu-list">
-        <li class="has-sub-menu">محصول 1 <span class="dropdown-icon" >◀</span>
-          <ul class="sub-menu-list">
-            <li>محصول 1</li>
-            <li>محصول 2</li>
-            <li>محصول 3</li>
-          </ul>
-        </li>
-        <li>محصول 2</li>
-        <li>محصول 3</li>
-        <li>محصول 4</li>
-      </ul>
-    </div>
-    <div class="menu-4-items">
-      <ul>
-        <li>خانه</li>
-        <li>محصولات</li>
-        <li>درباره ما</li>
-        <li>تماس با ما</li>
-      </ul>
-    </div>
-    <!-- بخش پشتیبانی -->
-    <div class="support">
-      <div class="support-text">
-        <span>پشتیبانی</span>
-        <span>021-12345678</span>
-      </div>
-      <div class="support-pic">
-            <img src="pic/support.svg"><img>
+        <!-- بخش دوم هدر -->
+        <div class="header-bottom">
+            <!-- منوی دراپ‌داون -->
+            <div class="menu-dropdown">
+                <div class="menu-title">
+                    <img src="pic/shop.svg"></img>
+                    دسته بندی ها <span class="dropdown-icon">▼</span>
+                </div>
+                <ul class="menu-list">
+                    <li class="has-sub-menu">محصول 1 <span class="dropdown-icon">◀</span>
+                        <ul class="sub-menu-list">
+                            <li>محصول 1</li>
+                            <li>محصول 2</li>
+                            <li>محصول 3</li>
+                        </ul>
+                    </li>
+                    <li>محصول 2</li>
+                    <li>محصول 3</li>
+                    <li>محصول 4</li>
+                </ul>
+            </div>
+            <div class="menu-4-items">
+                <ul>
+                    <li>خانه</li>
+                    <li>محصولات</li>
+                    <li>درباره ما</li>
+                    <li>تماس با ما</li>
+                </ul>
+            </div>
+            <!-- بخش پشتیبانی -->
+            <div class="support">
+                <div class="support-text">
+                    <span>پشتیبانی</span>
+                    <span>021-12345678</span>
+                </div>
+                <div class="support-pic">
+                    <img src="pic/support.svg"><img>
+                </div>
+            </div>
+        </div>
+        <div class="header-divider"></div>
+
+    </header>
+    <div class="main-content">
+        <div class="breadcrumb">
+            <nav><a href="">خانه</a><span>/</span><a href="">فروشگاه</a><span>/</span><a class="active-breadcrumb"
+                    href="">محصول 1</a></nav>
+        </div>
+        <div>
+            <div>
+                گالری تصاویر
+            </div>
+            <div>
+                عنون و مشخصات
+            </div>
+            <div>
+                قیمت و خرید
+            </div>
         </div>
     </div>
-  </div>
-  <div class="header-divider"></div>
-
-</header>
 </body>
+
 </html>
