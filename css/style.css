@@ -7,6 +7,9 @@
     font-weight: normal;
     font-style: normal;
 }
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'MyFont', sans-serif;
@@ -48,7 +51,7 @@ button {
     background: #ffffff;
     width: 1280px;
     /* پهنای ثابت */
-    height: 60px;
+    height: 80px;
     justify-content: space-between;
     direction: rtl;
     /* راست به چپ */
@@ -220,7 +223,7 @@ button {
     justify-content: space-between;
     align-items: center;
     background: #fff;
-    height: 60px;
+    height: 80px;
     padding: 10px 0;
     width: 1280px;
     /* پهنای ثابت */
@@ -374,18 +377,18 @@ button {
 }
 
 .support-pic {
-    height: 30px;
+    height: 60px;
     /* ارتفاع والد مشخص */
     display: flex;
     background-color: #eee;
     border-radius: 15px;
-    padding: 10px;
+    padding: 15px;
     align-items: center;
     /* وسط چین عمودی */
 }
 
 .support-pic img {
-    height: 100%;
+    height: 25px;
     /* 90% ارتفاع والد */
     width: auto;
     /* نسبت تصویر حفظ بشه */
@@ -444,4 +447,200 @@ button {
 
 .active-breadcrumb {
     color: #6968af !important;
+}
+
+/* بخش اطلاعات اصلی و کلی محصول */
+.product-main {
+    display: flex;
+    width: 1280px;
+    direction: rtl;
+    /* راست به چپ */
+    align-items: start;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    gap: 40px;
+}
+
+.product-features-title {
+    width: 35%;
+}
+
+.product-price-buy {
+    width: 25%;
+}
+
+
+/* گالری تصاویر  */
+.gallery {
+    display: flex;
+    gap: 10px;
+    width: 40%;
+    max-width: 1000px;
+    align-items: stretch;
+}
+
+/* تصویر اصلی */
+.main-image {
+    width: 80%;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.main-image::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.main-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.main-image:hover img {
+    transform: scale(1.15);
+}
+
+/* ستون سمت راست */
+.thumbs-container {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* گالری */
+.thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden; /* مهم */
+    flex: 1;
+    border-radius: 15px;
+}
+
+/* هر آیتم فقط 3 تا دیده بشه */
+.thumb {
+    width: 100%;
+    height: calc((100% - 20px) / 3);
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background: #f3f4f6;
+}
+
+.thumb:hover {
+    opacity: 70%;;
+    border-radius: 15px;
+}
+
+.thumb.active {
+    border: 2px solid #007bff;
+}
+
+/* فلش‌ها */
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.arrow {
+    border: none;
+    background: #eee;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.arrow:hover {
+    background: #ddd;
+}
+
+/* مودال */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.modal-prev,
+.modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.modal-prev {
+    left: 20px;
+}
+
+.modal-next {
+    right: 20px;
+}
+
+/*عنون محصول */
+.title {
+    font-size: 22px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.features-title {
+    display: flex;
+    align-items: center; /* اگر نیاز به وسط چین باشه */
+}
+
+.line-ended-p {
+    margin: 0;
+    padding-right: 10px; /* فاصله بین متن و خط */
+    position: relative;
+}
+
+.line-ended-p::after {
+    content: "";
+    flex: 1; /* باقیمانده فضا را می‌گیرد */
+    border-bottom: 1px solid #000; /* خط */
+    margin-left: 10px; /* فاصله از متن */
+}
+
+.features-list {
+    
 }

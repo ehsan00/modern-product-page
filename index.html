@@ -90,18 +90,57 @@
             <nav><a href="">خانه</a><span>/</span><a href="">فروشگاه</a><span>/</span><a class="active-breadcrumb"
                     href="">محصول 1</a></nav>
         </div>
-        <div>
-            <div>
-                گالری تصاویر
+        <div class="product-main">
+            <div class="gallery">
+
+                <!-- گالری کناری (راست) -->
+                <div class="thumbs-container">
+
+                    <div class="thumbs" id="thumbs">
+                        <img src="pic/1.jpg" class="thumb active">
+                        <img src="pic/2.jpg" class="thumb">
+                        <img src="pic/3.jpg" class="thumb">
+                        <img src="pic/4.jpg" class="thumb">
+                        <img src="pic/5.jpg" class="thumb">
+                    </div>
+                    <button class="arrow up"></button>
+                    <button class="arrow down"></button>
+                </div>
+
+                <!-- تصویر اصلی (چپ) -->
+                <div class="main-image">
+                    <img id="currentImage" src="pic/1.jpg" alt="">
+                </div>
+
             </div>
-            <div>
-                عنون و مشخصات
+
+            <!-- مودال -->
+            <div class="modal" id="modal">
+                <span class="close">&times;</span>
+                <button class="modal-prev">❮</button>
+                <img id="modalImage">
+                <button class="modal-next">❯</button>
             </div>
-            <div>
+
+            <div class="product-features-title">
+                <h1 class="title">عنوان محصول شماره 1 اینجاست</h1>
+                <div class="features-title">
+                    <p class="line-ended-p">مشخصات برجسته</p>
+                </div>
+                <ul class="features-list">
+                    <li>ویژگی 1</li>
+                    <li>ویژگی 2</li>
+                    <li>ویژگی 3</li>
+                    <li>ویژگی 4</li>
+                    <li>ویژگی 5</li>
+                </ul>
+            </div>
+            <div class="product-price-buy">
                 قیمت و خرید
             </div>
         </div>
     </div>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
