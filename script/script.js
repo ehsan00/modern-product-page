@@ -100,26 +100,27 @@ setActive(currentIndex);
 
 // توابع افزایش/کاهش تعداد
 function increment() {
-    const input = document.getElementById('quantity');
-    input.value = parseInt(input.value) + 1;
+  const input = document.getElementById('quantity');
+  input.value = parseInt(input.value) + 1;
 }
 
 function decrement() {
-    const input = document.getElementById('quantity');
-    if (parseInt(input.value) > 1) {
-        input.value = parseInt(input.value) - 1;
-    }
+  const input = document.getElementById('quantity');
+  if(parseInt(input.value) > 1) {
+    input.value = parseInt(input.value) - 1;
+  }
 }
+
 
 const navItems = document.querySelectorAll('.menu-dropdown');
 const overlay = document.querySelector('.overlay');
 
 navItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        overlay.classList.add('active');
-    });
+  item.addEventListener('mouseenter', () => {
+    overlay.classList.add('active');
+  });
 
-    item.addEventListener('mouseleave', () => {
-        overlay.classList.remove('active');
-    });
+  item.addEventListener('mouseleave', () => {
+    overlay.classList.remove('active');
+  });
 });
