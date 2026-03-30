@@ -57,6 +57,7 @@ button {
     justify-content: space-between;
     direction: rtl;
     /* راست به چپ */
+    z-index: 6;
 }
 
 .header-top>div {
@@ -217,6 +218,7 @@ button {
     /* ضخامت خط */
     background-color: #eee;
     /* رنگ خط */
+    z-index: 6;
 }
 
 /* بخش دوم هدر */
@@ -231,6 +233,7 @@ button {
     /* پهنای ثابت */
     direction: rtl;
     /* راست به چپ */
+    z-index: 6;
 }
 
 /* منوی دراپ‌داون */
@@ -242,6 +245,7 @@ button {
     background-color: #eee;
     /* پس زمینه ملایم خاکستری */
     border-radius: 15px;
+    z-index: 6;
 }
 
 .menu-title {
@@ -822,4 +826,24 @@ button {
 
 .add-to-cart:hover {
     background-color: #5a57b0;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 161px; /* ارتفاع هدر */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 5;
+}
+
+/* وقتی فعال شد */
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }

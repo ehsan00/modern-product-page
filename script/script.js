@@ -110,3 +110,17 @@ function decrement() {
     input.value = parseInt(input.value) - 1;
   }
 }
+
+
+const navItems = document.querySelectorAll('.menu-dropdown');
+const overlay = document.querySelector('.overlay');
+
+navItems.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    overlay.classList.add('active');
+  });
+
+  item.addEventListener('mouseleave', () => {
+    overlay.classList.remove('active');
+  });
+});
