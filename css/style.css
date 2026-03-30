@@ -830,20 +830,21 @@ button {
 
 
 .overlay {
-  position: fixed;
-  top: 161px; /* ارتفاع هدر */
-  left: 0;
-  width: 100%;
-  height: calc(100% - 80px);
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
-  z-index: 5;
+    position: fixed;
+    top: 161px;
+    /* ارتفاع هدر */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 5;
 }
 
 /* وقتی فعال شد */
 .overlay.active {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
